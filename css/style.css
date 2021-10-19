@@ -133,7 +133,8 @@ footer{
 
 /* Footer Left */
 .footer-box.left{
-    width: 30%;
+    max-width: 30%;
+    flex-grow: 0;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -144,8 +145,8 @@ footer .left>*{
 }
 
 footer .left img{
-    height: 30px;
-    width: 30px;
+    max-height: 40%;
+    max-width: 40%;
     margin-left: 8px;
 }
 
@@ -164,20 +165,108 @@ footer .left .icon-box{
 }
 
 footer .left .icon-box i{
-    margin-bottom: 3px;
+    margin: 2px 0;
+    color: #5a5a5a;
 }
 
 
 /* Footer Center */
 .footer-box.center{
     width: 40%;
+    min-width: 150px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 20px;
 }
 
+footer .center .action-box{
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .center .action-box i{
+    font-size: 15px;
+}
+
+footer .center .action-box i:nth-of-type(3){
+    font-size: 30px;
+    margin: 0 10px;
+}
+
+footer .center .time-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 12px;
+}
+
+footer .center .time-listened, footer .center .time-total{
+    font-size: 10px;
+    margin: 0 5px;
+}
+
+footer .center .timeline{
+    width: 80%;
+    height: 4px;
+    background-color: #5a5a5a;
+    border-radius: 5px;
+    position: relative;
+}
+
+footer .center .timeline.listened{
+    width: 20%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
 /* Footer Right */
 .footer-box.right{
     width: 30%;
+    flex-grow: 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
+
+footer .right>*{
+    margin: 0 5px;
+}
+
+footer .right i{
+    font-size: 13px;
+}
+
+footer .right .timeline{
+    width: 80px;
+    height: 4px;
+    background-color: #5a5a5a;
+    border-radius: 5px;
+    position: relative;
+}
+
+footer .right .timeline.listened{
+    width: 25%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* DA FIXARE:
+Quando restringo molto la finestra le sezioni del footer
+si sovrappongono in modo strano, per esempio l'immagine dell'album
+non si rimpicciolisce subito ma solo dopo che le sezioni
+si sono sovrapposte */
 
 /* +++ /FOOTER +++ */
 
@@ -234,17 +323,22 @@ footer .left .icon-box i{
 
 
 /* FOOTER */
-.footer-box{
-    height:100%;
-}
-
-.debug .footer-box:nth-of-type(odd){
+/* .debug .footer-box:nth-of-type(odd){
     background-color: lightpink;
 }
 
 .debug .footer-box:nth-of-type(even){
     background-color: lightblue;
 }
+
+.debug .left>*:nth-of-type(odd), .debug .center>*:nth-of-type(odd), .debug .right>*:nth-of-type(odd){
+    background-color: rgb(255, 148, 148);
+}
+
+.debug .left>*:nth-of-type(even), .debug .center>*:nth-of-type(even), .debug .right>*:nth-of-type(even){
+    background-color: rgb(95, 112, 83);
+} */
+
 /* /FOOTER */
 
 /* +++ /DEBUG +++ */
