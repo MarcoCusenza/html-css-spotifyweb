@@ -5,20 +5,64 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+.clearfix::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
 }
 /* +++ /COMMONS +++ */
 
 
 
-/* +++ ASIDE +++ */
-#sidebar{
-    width: 50px;
-}
-/* +++ /ASIDE +++ */
-
-
-
 /* +++ MAIN +++ */
+
+/* MAIN COMMONS */
+main{
+    display: flex;
+}
+
+.container-right{
+    width: calc(100% - 50px);
+}
+/* /MAIN COMMONS */
+
+/* SIDEBAR */
+main #sidebar{
+    height: calc(100vh - 80px);
+    width: 50px;
+    background-color: black;
+}
+/* /SIDEBAR */
+
+
+/* HEADER */
+main #header{
+    height: 80px;
+    width: calc(100% - 50px);
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+/* /HEADER */
+
+
+/* CONTENUTO */
+main #container-main{
+    background-color: #141922;
+}
+/* /CONTENUTO */
 
 /* +++ /MAIN +++ */
 
@@ -27,6 +71,7 @@
 /* +++ FOOTER +++ */
 footer{
     height: 80px;
+    background-color: #282828;
 }
 /* +++ /FOOTER +++ */
 
@@ -61,12 +106,19 @@ footer{
 /* +++ DEBUG +++ */
 
 .debug #sidebar{
+    
+}
+
+.debug #header{
+
+}
+
+.debug #container-main{
     height: calc(100vh - 80px);
-    background-color: black;
 }
 
 .debug footer{
-    background-color: #282828;
+    
 }
 
 /* +++ /DEBUG +++ */
