@@ -53,21 +53,29 @@ main{
     align-items: center;
 }
 
-#sidebar img{
+#sidebar .sb-container>*{
     width: 50%;
     margin: 5px 0;
     filter: opacity(.8);
 }
 
-#sidebar .bottom img:first-of-type{
+#sidebar .bottom>img:first-of-type{
     width: 25%;
+    margin-bottom: 18px;
+    /* IL GRAFICO CI HA DATO UN'ICONA DECENTRATA!!!! */
+    margin-left: -2px;
 }
 
-.profile-container{
-    
+#sidebar .profile-container{
+    height: 25px;
+    text-align: center;
+    background-color: #808080;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
-#sidebar .top img:first-of-type, .profile-container{
+#sidebar .top img:first-of-type, #sidebar .profile-container{
     filter: opacity(1);
 }
 /* /SIDEBAR */
