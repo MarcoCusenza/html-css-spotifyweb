@@ -38,16 +38,43 @@ main{
 /* /MAIN COMMONS */
 
 /* SIDEBAR */
-main #sidebar{
+#sidebar{
     height: calc(100vh - 80px);
     width: 50px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#sidebar .sb-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sidebar img{
+    width: 50%;
+    margin: 5px 0;
+    filter: opacity(.8);
+}
+
+#sidebar .bottom img:first-of-type{
+    width: 25%;
+}
+
+.profile-container{
+    
+}
+
+#sidebar .top img:first-of-type, .profile-container{
+    filter: opacity(1);
 }
 /* /SIDEBAR */
 
 
 /* HEADER */
-main #header{
+#header{
     height: 80px;
     width: calc(100% - 50px);
     background-color: rgba(0, 0, 0, .5);
@@ -59,7 +86,7 @@ main #header{
 
 
 /* CONTENUTO */
-main #container-main{
+#container-main{
     background-color: #141922;
 }
 /* /CONTENUTO */
