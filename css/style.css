@@ -1,5 +1,72 @@
+/* MOBILE-FIRST */
+
+/* +++ COMMONS +++ */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+/* +++ /COMMONS +++ */
+
+
+
+/* +++ ASIDE +++ */
+#sidebar{
+    width: 50px;
+}
+/* +++ /ASIDE +++ */
+
+
+
+/* +++ MAIN +++ */
+
+/* +++ /MAIN +++ */
+
+
+
+/* +++ FOOTER +++ */
+footer{
+    height: 80px;
+}
+/* +++ /FOOTER +++ */
+
+
+
+
+
+/* +++++++++++++++++++++++++++++++ */
+
+/* MEDIAQUERY SM */
+@media screen and (min-width: 576px){
+
+}
+
+
+/* MEDIAQUERY MD */
+@media screen and (min-width: 768px){
+
+}
+
+
+/* MEDIAQUERY LG */
+@media screen and (min-width: 992px){
+
+}
+
+/* +++++++++++++++++++++++++++++++ */
+
+
+
+
+/* +++ DEBUG +++ */
+
+.debug #sidebar{
+    height: calc(100vh - 80px);
+    background-color: black;
+}
+
+.debug footer{
+    background-color: #282828;
+}
+
+/* +++ /DEBUG +++ */
