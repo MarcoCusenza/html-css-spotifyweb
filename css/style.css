@@ -22,6 +22,18 @@
 .float-right{
     float: right;
 }
+
+i:hover{
+    cursor: pointer;
+}
+
+.timeline:hover{
+    cursor: pointer;
+}
+
+img:hover{
+    cursor: pointer;
+}
 /* +++ /COMMONS +++ */
 
 
@@ -104,6 +116,10 @@ main{
     border-radius: 30px;
     padding: 12px 35px;
     margin-right: 5px;
+}
+
+#header .upgrade:hover{
+    cursor: pointer;
 }
 /* /HEADER */
 
@@ -231,7 +247,6 @@ footer .center .timeline.listened{
 .footer-box.right{
     width: 30%;
     flex-grow: 0;
-    flex-shrink: 0;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -276,6 +291,11 @@ footer .right .timeline.listened{
 
     footer .right .timeline{
         display: none;
+    }
+
+    footer-box.right{
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -334,7 +354,7 @@ footer .right .timeline.listened{
 
 
 /* FOOTER */
-.debug .footer-box:nth-of-type(odd){
+/* .debug .footer-box:nth-of-type(odd){
     background-color: lightpink;
 }
 
@@ -348,7 +368,7 @@ footer .right .timeline.listened{
 
 .debug .left>*:nth-of-type(even), .debug .center>*:nth-of-type(even), .debug .right>*:nth-of-type(even){
     background-color: rgb(95, 112, 83);
-}
+} */
 
 /* /FOOTER */
 
