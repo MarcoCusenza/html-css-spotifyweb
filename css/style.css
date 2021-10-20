@@ -1,5 +1,10 @@
 /* MOBILE-FIRST */
 
+/* DA SISTEMARE
+1) Bordino verde sotto le categorie da ripensare
+
+/DA SISTEMARE */
+
 /* +++ COMMONS +++ */
 *{
     box-sizing: border-box;
@@ -37,12 +42,8 @@ a{
 /* +++ MAIN +++ */
 
 /* MAIN COMMONS */
-main{
-    display: flex;
-}
-
 .container-page{
-    width: calc(100% - 40px);
+    width: calc(100% - 50px);
 }
 /* /MAIN COMMONS */
 
@@ -50,7 +51,7 @@ main{
 #sidebar{
     height: calc(100vh - 80px);
     min-height: 400px;
-    width: 40px;
+    width: 50px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -66,11 +67,12 @@ main{
 #sidebar .sb-box>*{
     width: 50%;
     margin: 2px 0;
-    filter: opacity(.7);
+    filter: opacity(.8);
 }
 
-#sidebar .top:first-child{
-    margin-top: 3px;
+#sidebar .top a:first-of-type{
+    margin: 8px 0 6px 0;
+    width: 60%;
 }
 
 #sidebar .bottom>a:first-of-type{
@@ -81,7 +83,7 @@ main{
 }
 
 #sidebar .profile-box{
-    height: 20px;
+    height: 25px;
     text-align: center;
     background-color: #808080;
     border-radius: 50%;
@@ -98,7 +100,7 @@ main{
 /* HEADER */
 #header{
     height: 80px;
-    width: calc(100% - 40px);
+    width: calc(100% - 50px);
     background-color: rgba(0, 0, 0, .5);
     position: fixed;
     top: 0;
@@ -111,7 +113,7 @@ main{
 
 #header .upgrade{
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     border: 1px solid white;
     border-radius: 30px;
@@ -121,11 +123,75 @@ main{
 /* /HEADER */
 
 
-/* CONTENUTO */
-#content{
+/* PAGINA */
+#page-box{
     background-color: #141922;
+    padding: 90px 20px 20px 20px;
+    overflow: auto;
 }
-/* /CONTENUTO */
+
+#categories{
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#categories a{
+    color: #7d7f84;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 10px 20px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.b-bot{
+    width: 30px;
+    border-bottom: 2px solid #acff2f00;
+}
+
+#categories a:hover div.b-bot{
+    border-bottom-color: #acff2f;
+    transition: .5s;
+}
+
+#content h2{
+    margin: 15px 0;
+}
+
+.card-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    width: 95%;
+}
+
+.card h4{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card .artist{
+    font-size: 12px;
+    font-weight: 700;
+    color: #7d7f84;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* /PAGINA */
 
 /* +++ /MAIN +++ */
 
@@ -171,7 +237,7 @@ footer .left .text-box h5{
 footer .left .text-box .artista{
     font-size: 8.5px;
     font-weight: 700;
-    color: #727272;
+    color: #7d7f84;
 }
 
 footer .left .icon-box{
@@ -185,7 +251,7 @@ footer .left .icon-box a{
 }
 
 footer .left .icon-box i{
-    color: #727272;
+    color: #7d7f84;
 }
 
 
@@ -205,7 +271,7 @@ footer .center .action-box{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 6px 0;
+    margin: 8px 0 6px 0;
 }
 
 footer .center .action-box a{
@@ -289,7 +355,7 @@ footer .right .timeline.listened{
 /* +++++++++++++++++++++++++++++++ */
 /* BONUS: MEDIAQUERY XXS */
 @media screen and (max-width: 380px){
-    
+
 
     footer .right .timeline{
         display: none;
@@ -353,7 +419,7 @@ footer .right .timeline.listened{
 
 
 /* MAIN */
-.debug #content{
+.debug #page-box{
     height: calc(100vh - 80px);
 }
 /* /MAIN */
