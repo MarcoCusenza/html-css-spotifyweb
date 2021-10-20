@@ -23,15 +23,11 @@
     float: right;
 }
 
-i:hover{
-    cursor: pointer;
+a{
+    text-decoration: none;
 }
 
 .timeline:hover{
-    cursor: pointer;
-}
-
-img:hover{
     cursor: pointer;
 }
 /* +++ /COMMONS +++ */
@@ -53,6 +49,7 @@ main{
 /* SIDEBAR */
 #sidebar{
     height: calc(100vh - 80px);
+    min-height: 400px;
     width: 40px;
     background-color: black;
     display: flex;
@@ -68,15 +65,19 @@ main{
 
 #sidebar .sb-box>*{
     width: 50%;
-    margin: 5px 0;
-    filter: opacity(.8);
+    margin: 2px 0;
+    filter: opacity(.7);
 }
 
-#sidebar .bottom>img:first-of-type{
-    width: 25%;
-    margin-bottom: 18px;
+#sidebar .top:first-child{
+    margin-top: 3px;
+}
+
+#sidebar .bottom>a:first-of-type{
+    width: 30%;
+    margin-bottom: 10px;
     /* IL GRAFICO CI HA DATO UN'ICONA DECENTRATA!!!! */
-    margin-left: -2px;
+    margin-left: -2.5px;
 }
 
 #sidebar .profile-box{
@@ -88,7 +89,7 @@ main{
     margin-bottom: 10px;
 }
 
-#sidebar .top img:first-of-type, #sidebar .profile-box{
+#sidebar .top a:first-of-type, #sidebar a:last-of-type{
     filter: opacity(1);
 }
 /* /SIDEBAR */
@@ -116,10 +117,6 @@ main{
     border-radius: 30px;
     padding: 12px 35px;
     margin-right: 5px;
-}
-
-#header .upgrade:hover{
-    cursor: pointer;
 }
 /* /HEADER */
 
@@ -149,40 +146,46 @@ footer{
 
 /* Footer Left */
 .footer-box.left{
-    max-width: 30%;
+    width: 30%;
     flex-grow: 0;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-footer .left>*{
-    margin: 0 5px;
-}
-
-footer .left img{
-    max-height: 40%;
-    max-width: 40%;
+footer .left a:first-of-type{
+    width: 20%;
+    max-width: 50px;
     margin-left: 8px;
 }
 
+footer .left img{
+    max-height: 70%;
+    max-width: 70%;
+}
+
 footer .left .text-box h5{
-    font-size: 12px;
+    font-size: 10px;
 }
 
 footer .left .text-box .artista{
-    font-size: 10px;
-    color: #5a5a5a;
+    font-size: 8.5px;
+    font-weight: 700;
+    color: #727272;
 }
 
 footer .left .icon-box{
     display: flex;
     flex-direction: column;
+    margin: 0 8px;
+}
+
+footer .left .icon-box a{
+    margin: 1px 0;
 }
 
 footer .left .icon-box i{
-    margin: 2px 0;
-    color: #5a5a5a;
+    color: #727272;
 }
 
 
@@ -193,7 +196,7 @@ footer .left .icon-box i{
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
@@ -202,13 +205,14 @@ footer .center .action-box{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 6px 0;
 }
 
-footer .center .action-box i{
+footer .center .action-box a{
     font-size: 15px;
 }
 
-footer .center .action-box i:nth-of-type(3){
+footer .center .action-box a:nth-of-type(3){
     font-size: 30px;
     margin: 0 10px;
 }
@@ -218,12 +222,11 @@ footer .center .time-box{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    margin-top: 12px;
 }
 
 footer .center .time-listened, footer .center .time-total{
-    font-size: 10px;
+    font-size: 8px;
+    font-weight: 600;
     margin: 0 5px;
 }
 
@@ -250,6 +253,7 @@ footer .center .timeline.listened{
     display: flex;
     justify-content: end;
     align-items: center;
+    margin-left: 8px;
 }
 
 footer .right>*{
@@ -285,9 +289,7 @@ footer .right .timeline.listened{
 /* +++++++++++++++++++++++++++++++ */
 /* BONUS: MEDIAQUERY XXS */
 @media screen and (max-width: 380px){
-    footer .left img{
-        display: none;
-    }
+    
 
     footer .right .timeline{
         display: none;
@@ -301,8 +303,12 @@ footer .right .timeline.listened{
 
 /* BONUS: MEDIAQUERY XS */
 @media screen and (max-width: 420px){
-    footer .left img{
+    footer .left>a:first-of-type{
         display: none;
+    }
+
+    footer .left .text-box{
+        margin-left: 4px;
     }
 }
 
