@@ -420,7 +420,7 @@ footer .right .timeline.listened{
 
 
 /* MEDIAQUERY SM */
-@media screen and (min-width: 512px){
+@media screen and (min-width: 576px){
     /* SIDEBAR */
     #sidebar{
         width: 200px;
@@ -539,7 +539,7 @@ footer .right .timeline.listened{
 
 
 /* MEDIAQUERY MD */
-@media screen and (min-width: 692px){
+@media screen and (min-width: 768px){
     .card{
         width: calc(25% - 11px);
     }
