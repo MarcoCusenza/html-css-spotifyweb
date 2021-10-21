@@ -93,7 +93,7 @@ div.b-left{
     border-left: 2px solid #acff2f00;
     position: absolute;
     top: 0;
-    left: -18px;
+    left: -12px;
 }
 
 #sidebar .top .sb-item:hover div.b-left{
@@ -545,6 +545,10 @@ footer .right .timeline.listened{
         font-weight: 600;
         filter: opacity(.5);
         display: block;
+    }
+
+    div.b-left{
+        left: -19px;
     }
 
     .bottom hr{
