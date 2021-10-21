@@ -64,22 +64,31 @@ a{
     align-items: center;
 }
 
-#sidebar .sb-box>*{
-    width: 50%;
+.sb-box>* img{
+    width: 25px;
     margin: 2px 0;
     filter: opacity(.8);
 }
 
-#sidebar .top a:first-of-type{
-    margin: 8px 0 6px 0;
-    width: 60%;
+#logo-grande{
+    display: none;
 }
 
-#sidebar .bottom>a:first-of-type{
-    width: 30%;
+#sidebar #logo-piccolo img{
+    margin: 8px 0 6px 0;
+    width: 30px;
+    filter: opacity(1);
+}
+
+#sidebar .sb-item .sb-text{
+    display: none;
+}
+
+#sidebar .bottom .download img{
+    width: 15px;
     margin-bottom: 10px;
     /* IL GRAFICO CI HA DATO UN'ICONA DECENTRATA!!!! */
-    margin-left: -2.5px;
+    margin-left: -2px;
 }
 
 #sidebar .profile-box{
@@ -88,7 +97,14 @@ a{
     background-color: #808080;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 10px;
+}
+
+.bottom .sb-item:last-of-type{
+    padding-bottom: 8px;
+}
+
+.bottom hr{
+    display: none;
 }
 
 #sidebar .top a:first-of-type, #sidebar a:last-of-type{
@@ -179,7 +195,7 @@ div.b-bot{
 }
 
 .card{
-    width: 48%;
+    width: 47%;
     max-width: 200px;
     display: flex;
     text-align: center;
@@ -382,7 +398,11 @@ footer .right .timeline.listened{
 }
 
 /* BONUS: MEDIAQUERY XS */
-@media screen and (max-width: 420px){
+@media screen and (max-width: 430px){
+    .card{
+        margin-right: 3%;
+    }
+
     footer .left>a:first-of-type{
         display: none;
     }
@@ -395,7 +415,70 @@ footer .right .timeline.listened{
 
 /* MEDIAQUERY SM */
 @media screen and (min-width: 576px){
+    /* SIDEBAR */
+    #sidebar{
+        width: 200px;
+        padding: 0 20px;
+    }
 
+    #sidebar .sb-box{
+        align-items: flex-start;
+    }
+
+    #logo-piccolo{
+        display: none;
+    }
+
+    #sidebar #logo-grande{
+        display: block;
+    }
+
+    #sidebar #logo-grande img{
+        width: 130px;
+        margin: 20px 0;
+        filter: opacity(1);
+    }
+
+    #sidebar .sb-item{
+        display: flex;
+        align-items: center;
+        margin: 2px 0;
+    }
+
+    #sidebar .sb-item .sb-text{
+        margin-left: 5px;
+        font-size: 11.5px;
+        font-weight: 600;
+        filter: opacity(.5);
+        display: block;
+    }
+
+    .bottom hr{
+        display: block;
+        width: 160px;
+        filter: opacity(.5);
+        margin: 8px 0 12px 0;
+    }
+
+    #sidebar .bottom .download img {
+        margin: 0 5px 0 0;
+    }
+
+    #sidebar .bottom .download .sb-text {
+        font-size: 11px;
+    }
+
+    /* /SIDEBAR */
+
+    /* MAIN */
+    #header{
+        width: calc(100% - 200px);
+    }
+
+    .container-page{
+        width: calc(100% - 200px);
+    }
+    /* /MAIN */
 }
 
 
