@@ -110,6 +110,10 @@ a{
 #sidebar .top a:first-of-type, #sidebar a:last-of-type{
     filter: opacity(1);
 }
+
+#playlist{
+    display: none;
+}
 /* /SIDEBAR */
 
 
@@ -466,6 +470,54 @@ footer .right .timeline.listened{
 
     #sidebar .bottom .download .sb-text {
         font-size: 11px;
+    }
+
+    #playlist{
+        display: block;
+        margin-top: 25px;
+    }
+
+    #playlist>h5{
+        text-transform: uppercase;
+    }
+
+    #playlist .crea-playlist{
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: opacity(.5);
+    }
+
+    #playlist .crea-playlist .plus{
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    #playlist .crea-playlist .plus i{
+        color: black;
+        transform: scale(1.3);
+    }
+
+    #playlist .crea-playlist span{
+        font-size: 15px;
+    }
+
+    #playlist ul{
+        list-style: none;
+        filter: opacity(.5);
+    }
+
+    #playlist span, #playlist li{
+        font-size: 12.5px;
+        font-weight: 600;
+        line-height: 40px;
     }
 
     /* /SIDEBAR */
