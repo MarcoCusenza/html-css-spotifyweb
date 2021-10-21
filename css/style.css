@@ -50,7 +50,7 @@ a{
 /* SIDEBAR */
 #sidebar{
     height: calc(100vh - 80px);
-    min-height: 400px;
+    min-height: 250px;
     width: 50px;
     background-color: black;
     display: flex;
@@ -154,6 +154,7 @@ a{
 /* /PAGINA COMMONS */
 
 #page-box{
+    height: calc(100vh - 80px);
     background-color: #141922;
     padding: 90px 20px 20px 20px;
     overflow: auto;
@@ -199,8 +200,7 @@ div.b-bot{
 }
 
 .card{
-    width: 47%;
-    max-width: 200px;
+    width: calc(50% - 11px);
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -221,6 +221,8 @@ div.b-bot{
 }
 
 .card .subtitle{
+    font-size: 11px;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -418,7 +420,7 @@ footer .right .timeline.listened{
 
 
 /* MEDIAQUERY SM */
-@media screen and (min-width: 576px){
+@media screen and (min-width: 512px){
     /* SIDEBAR */
     #sidebar{
         width: 200px;
@@ -490,8 +492,8 @@ footer .right .timeline.listened{
     }
 
     #playlist .crea-playlist .plus{
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
         background-color: white;
         border-radius: 3px;
         display: flex;
@@ -502,16 +504,18 @@ footer .right .timeline.listened{
 
     #playlist .crea-playlist .plus i{
         color: black;
-        transform: scale(1.3);
+        transform: scale(1.24);
     }
 
     #playlist .crea-playlist span{
         font-size: 15px;
+        font-weight: 500;
     }
 
     #playlist ul{
         list-style: none;
         filter: opacity(.5);
+        overflow: auto;
     }
 
     #playlist span, #playlist li{
@@ -535,14 +539,19 @@ footer .right .timeline.listened{
 
 
 /* MEDIAQUERY MD */
-@media screen and (min-width: 768px){
-
+@media screen and (min-width: 692px){
+    .card{
+        width: calc(25% - 11px);
+    }
 }
 
 
 /* MEDIAQUERY LG */
 @media screen and (min-width: 992px){
-
+    .card{
+        width: calc(16.666% - 10px);
+        max-width: 180px;
+    }
 }
 
 /* +++++++++++++++++++++++++++++++ */
@@ -568,9 +577,7 @@ footer .right .timeline.listened{
 
 
 /* MAIN */
-.debug #page-box{
-    height: calc(100vh - 80px);
-}
+
 /* /MAIN */
 
 
